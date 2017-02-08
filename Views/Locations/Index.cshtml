@@ -1,6 +1,16 @@
-﻿@{
+﻿@model IEnumerable<IndianaJonesBlog.Models.Location>
+
+@{
     ViewData["Title"] = "To Do List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h3>Location</h3>
+
+@foreach (var loc in Model)
+{
+    <div>@Html.DisplayFor( _ => loc.Region), @Html.DisplayFor( _ => loc.Country) | @Html.ActionLink("Edit", "Edit", new { id = loc.LocationId }) | @Html.ActionLink("Delete", "Delete", new { id = loc.LocationId })</div>
+
+}
+
+@Html.ActionLink("Add new Location", "Create")

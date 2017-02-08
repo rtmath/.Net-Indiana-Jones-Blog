@@ -1,0 +1,19 @@
+﻿@model IndianaJonesBlog.Models.Location
+
+@{
+    ViewData["Title"] = "To Do List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Region)
+    @Html.TextBoxFor(model => model.Region)
+
+    @Html.LabelFor(model => model.Country)
+    @Html.TextBoxFor(model => model.Country)
+
+    <input type="submit" class="btn btn-default" />
+}
+
+@Html.ActionLink("Back to Locations", "Index")

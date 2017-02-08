@@ -1,0 +1,19 @@
+﻿@model IndianaJonesBlog.Models.Location
+
+@{
+    ViewData["Title"] = "To Do List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Are you sure you want to delete this?</h2>
+
+<hr />
+
+<strong>@Html.DisplayFor(model => model.Region), @Html.DisplayFor(model => model.Country)</strong>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete"/>
+
+}
+@Html.ActionLink("Back to Locations", "Index")
