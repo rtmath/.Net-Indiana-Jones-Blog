@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Indiana Jones Blog - Create Person";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IndianaJonesBlog.Models.Experience
+
+<h1>New Experience</h1>
+
+<form asp-controller="Experiences" asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Experience</label>
+
+        <input asp-for="Title" class="form-control" placeholder="Title" />
+        <br />
+        <textarea class="form-control" asp-for="Description" placeholder="Description"></textarea>
+
+        <label>Where did this experience take place?</label>
+
+        <select asp-for="LocationId" id="locationList" class="form-control">
+            @foreach (var loc in ViewBag.ListOfLocations)
+            {
+                <option value=@loc.LocationId>@loc.Region, @loc.Country</option>
+            }
+        </select>
+
+    </div>
+    <input type="submit" value="Create" class="btn btn-default" />
+</form>
+@Html.ActionLink("Back", "Index")
+
+
+@*@Html.TextBoxFor(model => model.Title, new { @placeholder = "Title", @class = "form-control" })*@
+@*@Html.TextAreaFor(model => model.Description, new { @placeholder = "Description", @class = "form-control" })*@
+@*<label>People that were part of this experience</label>
+    <select id="peopleList" class="form-control" multiple="true">
+        @foreach (var person in ViewBag.ListOfPeople)
+        {
+            <option value=@person.PersonId>@person.FirstName @person.LastName</option>
+        }
+    </select>*@
+@*@Html.ListBoxFor( ViewBag => ViewBag.People, ViewBag.PersonList, new { @multiple = "true" })*@

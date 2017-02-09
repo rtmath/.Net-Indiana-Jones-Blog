@@ -8,9 +8,10 @@ using IndianaJonesBlog.Models;
 namespace IndianaJonesBlog.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20170208233614_TryToFixPersonIdInExperience")]
+    partial class TryToFixPersonIdInExperience
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")

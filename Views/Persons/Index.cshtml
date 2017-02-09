@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Indiana Jones Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model ICollection<IndianaJonesBlog.Models.Person>
+
+<h1>People</h1>
+
+@foreach (var person in Model)
+{
+    <p>@Html.DisplayFor( _ => person.FirstName) @Html.DisplayFor(_ => person.LastName) | @Html.ActionLink("Edit", "Edit", new { id = person.PersonId}) | @Html.ActionLink("Delete", "Delete", new { id = person.PersonId})</p>
+}
+
+@Html.ActionLink("Add new person", "Create")

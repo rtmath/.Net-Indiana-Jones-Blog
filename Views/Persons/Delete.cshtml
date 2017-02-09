@@ -1,4 +1,4 @@
-﻿@model IndianaJonesBlog.Models.Location
+﻿@model IndianaJonesBlog.Models.Person
 
 @{
     ViewData["Title"] = "Indiana Jones Blog";
@@ -9,11 +9,11 @@
 
 <hr />
 
-<strong>@Html.DisplayFor(model => model.Region), @Html.DisplayFor(model => model.Country)</strong>
+<strong>@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</strong>
 
 @using (Html.BeginForm())
 {
-    <input type="submit" value="Delete"/>
+    <input type="submit" value="Delete" />
 
 }
 @Html.ActionLink("Back to Locations", "Index")

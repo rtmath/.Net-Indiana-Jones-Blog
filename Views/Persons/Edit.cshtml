@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Indiana Jones Blog - Edit Person";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IndianaJonesBlog.Models.Person
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PersonId)
+    
+    <div class="form-group">
+        <label for="FirstName">Name</label><br />
+        @Html.EditorFor(model => model.FirstName)
+        
+        @Html.EditorFor(model => model.LastName)
+    </div>
+
+    <input type="submit" class="btn btn-success" />
+}
+
+@Html.ActionLink("Back to People", "Index")

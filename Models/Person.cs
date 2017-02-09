@@ -14,6 +14,6 @@ namespace IndianaJonesBlog.Models
         public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public ICollection<Experience> Experiences { get; set; }
+        public ICollection<ExperiencePerson> ExperiencesPersons { get; set; }
     }
 }

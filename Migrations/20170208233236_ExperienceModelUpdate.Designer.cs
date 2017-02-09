@@ -8,9 +8,10 @@ using IndianaJonesBlog.Models;
 namespace IndianaJonesBlog.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20170208233236_ExperienceModelUpdate")]
+    partial class ExperienceModelUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -25,11 +26,15 @@ namespace IndianaJonesBlog.Migrations
 
                     b.Property<int>("LocationId");
 
+                    b.Property<int?>("PersonId");
+
                     b.Property<string>("Title");
 
                     b.HasKey("ExperienceId");
 
                     b.HasIndex("LocationId");
+
+                    b.HasIndex("PersonId");
 
                     b.ToTable("Experiences");
                 });
@@ -86,6 +91,10 @@ namespace IndianaJonesBlog.Migrations
                         .WithMany("Experiences")
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("IndianaJonesBlog.Models.Person")
+                        .WithMany("Experiences")
+                        .HasForeignKey("PersonId");
                 });
 
             modelBuilder.Entity("IndianaJonesBlog.Models.ExperiencePerson", b =>
@@ -96,7 +105,7 @@ namespace IndianaJonesBlog.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("IndianaJonesBlog.Models.Person", "Person")
-                        .WithMany("ExperiencesPersons")
+                        .WithMany()
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

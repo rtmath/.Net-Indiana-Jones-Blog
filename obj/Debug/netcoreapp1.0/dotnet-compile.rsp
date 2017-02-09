@@ -198,9 +198,15 @@
 --resource:"c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\obj\Debug\netcoreapp1.0\IndianaJonesBlogdotnet-compile.deps.json",IndianaJonesBlog.deps.json
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Program.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Startup.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Controllers\ExperiencesController.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Controllers\LocationsController.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Controllers\PersonsController.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208184226_Initial.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208184226_Initial.Designer.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233236_ExperienceModelUpdate.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233236_ExperienceModelUpdate.Designer.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233614_TryToFixPersonIdInExperience.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233614_TryToFixPersonIdInExperience.Designer.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\BlogContextModelSnapshot.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Models\BlogContext.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Models\Experience.cs

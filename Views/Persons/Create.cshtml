@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Indiana Jones Blog - Create Person";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IndianaJonesBlog.Models.Person
+
+<h1>New Person</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="FirstName">Name</label>
+        @Html.TextBoxFor(model => model.FirstName, new { @placeholder="First", @class="form-control" })
+        <br />
+        @Html.TextBoxFor(model => model.LastName, new { @placeholder ="Last", @class = "form-control" })
+    </div>
+        <input type="submit" value="Create" class="btn btn-default" />
+        }
+
+        @Html.ActionLink("Back", "Index")

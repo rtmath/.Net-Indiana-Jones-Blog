@@ -1,0 +1,17 @@
+﻿@model IEnumerable<IndianaJonesBlog.Models.Experience>
+
+@{
+    ViewData["Title"] = "Indiana Jones Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Experiences</h3>
+
+@foreach (var experience in Model)
+{
+    <div>@Html.DisplayFor(_ => experience.Title)</div>
+    <div> @Html.DisplayFor(_ => experience.Description)</div>
+
+}
+
+@Html.ActionLink("Add new Experience", "Create")
