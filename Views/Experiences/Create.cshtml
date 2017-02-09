@@ -23,6 +23,13 @@
                 <option value=@loc.LocationId>@loc.Region, @loc.Country</option>
             }
         </select>
+        <label>People that were part of this experience</label>
+        <select id="peopleIds" name="peopleIds" class="form-control" multiple="true">
+            @foreach (var person in ViewBag.ListOfPeople)
+            {
+                <option value=@person.PersonId>@person.FirstName @person.LastName</option>
+            }
+        </select>
 
     </div>
     <input type="submit" value="Create" class="btn btn-default" />
@@ -32,11 +39,5 @@
 
 @*@Html.TextBoxFor(model => model.Title, new { @placeholder = "Title", @class = "form-control" })*@
 @*@Html.TextAreaFor(model => model.Description, new { @placeholder = "Description", @class = "form-control" })*@
-@*<label>People that were part of this experience</label>
-    <select id="peopleList" class="form-control" multiple="true">
-        @foreach (var person in ViewBag.ListOfPeople)
-        {
-            <option value=@person.PersonId>@person.FirstName @person.LastName</option>
-        }
-    </select>*@
+
 @*@Html.ListBoxFor( ViewBag => ViewBag.People, ViewBag.PersonList, new { @multiple = "true" })*@

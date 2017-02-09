@@ -28,19 +28,22 @@ namespace IndianaJonesBlog.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Experience experience)
+        public IActionResult Create(Experience experience, int[] peopleIds)
         {
 
 
             db.Experiences.Add(experience);
+            System.Diagnostics.Debug.WriteLine(experience.ExperienceId);
             db.SaveChanges();
+            System.Diagnostics.Debug.WriteLine(experience.ExperienceId);
+            System.Diagnostics.Debug.WriteLine(int.MinValue);
+            System.Diagnostics.Debug.WriteLine(int.MaxValue);
+            foreach (var personId in peopleIds)
+            {
+                db.ExperiencesPersons.Add(new ExperiencePerson(experience.ExperienceId, personId));
+            }
 
-            //foreach (var personId in peopleIds)
-            //{
-            //    db.ExperiencesPersons.Add(new ExperiencePerson(experience.ExperienceId, personId));
-            //}
-
-            //db.SaveChanges();
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
     }

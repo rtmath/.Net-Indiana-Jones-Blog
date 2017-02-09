@@ -1,5 +1,5 @@
---temp-output:c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\obj\Debug\netcoreapp1.0\
---out:c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\bin\Debug\netcoreapp1.0\IndianaJonesBlog.dll
+--temp-output:C:\Users\epicodus\Desktop\net-indiana-jone-blog\obj\Debug\netcoreapp1.0\
+--out:C:\Users\epicodus\Desktop\net-indiana-jone-blog\bin\Debug\netcoreapp1.0\net-indiana-jone-blog.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -8,7 +8,7 @@
 --suppress-warning:CS1705
 --optimize:False
 --emit-entry-point:True
---output-name:IndianaJonesBlog
+--output-name:net-indiana-jone-blog
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -195,21 +195,21 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\obj\Debug\netcoreapp1.0\IndianaJonesBlogdotnet-compile.deps.json",IndianaJonesBlog.deps.json
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Program.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Startup.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Controllers\ExperiencesController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Controllers\LocationsController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Controllers\PersonsController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208184226_Initial.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208184226_Initial.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233236_ExperienceModelUpdate.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233236_ExperienceModelUpdate.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233614_TryToFixPersonIdInExperience.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\20170208233614_TryToFixPersonIdInExperience.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Migrations\BlogContextModelSnapshot.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Models\BlogContext.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Models\Experience.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Models\ExperiencePerson.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Models\Location.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\IndianaJonesBlog\src\IndianaJonesBlog\Models\Person.cs
+--resource:"C:\Users\epicodus\Desktop\net-indiana-jone-blog\obj\Debug\netcoreapp1.0\net-indiana-jone-blogdotnet-compile.deps.json",net-indiana-jone-blog.deps.json
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Program.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Startup.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Controllers\ExperiencesController.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Controllers\LocationsController.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Controllers\PersonsController.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208184226_Initial.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208184226_Initial.Designer.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208233236_ExperienceModelUpdate.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208233236_ExperienceModelUpdate.Designer.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208233614_TryToFixPersonIdInExperience.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208233614_TryToFixPersonIdInExperience.Designer.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\BlogContextModelSnapshot.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Models\BlogContext.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Models\Experience.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Models\ExperiencePerson.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Models\Location.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Models\Person.cs
