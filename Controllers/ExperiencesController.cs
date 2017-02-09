@@ -14,7 +14,7 @@ namespace IndianaJonesBlog.Controllers
     public class ExperiencesController : Controller
     {
         private BlogContext db = new BlogContext();
-        // GET: /<controller>/
+
         public IActionResult Index()
         {
             return View(db.Experiences.ToList());
@@ -22,8 +22,6 @@ namespace IndianaJonesBlog.Controllers
 
         public IActionResult Create()
         {
-            //ViewBag.People = db.Persons.ToList();
-            //ViewBag.PersonList = new SelectList(db.Persons, "PersonId", "Name");
             ViewBag.ListOfPeople = db.Persons.ToList();
             ViewBag.ListOfLocations = db.Locations.ToList();
             return View();
@@ -49,7 +47,10 @@ namespace IndianaJonesBlog.Controllers
             var thisExperience = db.Experiences.FirstOrDefault(e => e.ExperienceId == id);
 
             ViewBag.Persons = db.ExperiencesPersons
-                .Include(ep => ep.Person).Where(ep => ep.ExperienceId == thisExperience.ExperienceId).Select(ep => ep.Person).ToList();
+                .Include(ep => ep.Person)
+                .Where(ep => ep.ExperienceId == thisExperience.ExperienceId)
+                .Select(ep => ep.Person)
+                .ToList();
 
 
             return View(thisExperience);
@@ -58,7 +59,10 @@ namespace IndianaJonesBlog.Controllers
         public IActionResult Edit (int id)
         {
 
-            var selectedExperience = db.Experiences.Include(e => e.ExperiencesPersons).ThenInclude(ep => ep.Person).Include(e => e.Location).FirstOrDefault(e => e.ExperienceId == id);
+            var selectedExperience = db.Experiences
+                .Include(e => e.Location)
+                .Include(e => e.ExperiencesPersons).ThenInclude(ep => ep.Person)
+                .FirstOrDefault(e => e.ExperienceId == id);
 
             ViewBag.SelectedPeople = new List<Person>();
             
@@ -68,11 +72,6 @@ namespace IndianaJonesBlog.Controllers
             }
 
 
-
-            //var selectedExperience = db.Experiences.FirstOrDefault(e => e.ExperienceId == id);
-  
-            //ViewBag.SelectedPeople = db.ExperiencesPersons
-            //    .Include(ep => ep.Person).Where(ep => ep.ExperienceId == selectedExperience.ExperienceId).Select(op => op.Person).ToList();
             
             ViewBag.ListOfPeople = db.Persons.ToList();
 
@@ -82,17 +81,43 @@ namespace IndianaJonesBlog.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Experience experience, int[] peopleIds)
+        public IActionResult Edit(Experience experience, List<int> peopleIds)
         {
 
+            //foreach(var experiencePerson in experience.ExperiencesPersons)
+            //{
+            //    if(!peopleIds.Contains(experiencePerson.PersonId))
+            //    {   
+            //        db.ExperiencesPersons.Remove(experiencePerson);
+            //    }
+            //    else
+            //    {
+            //        peopleIds.Remove(experiencePerson.PersonId);
+            //    }
+            //}
 
-            db.Experiences.Add(experience);
+            //foreach (var remainingId in peopleIds)
+            //{
+            //    db.ExperiencesPersons.Add(new ExperiencePerson(experience.ExperienceId, remainingId));
+            //}
+
+            db.Entry(experience).State = EntityState.Modified;
             db.SaveChanges();
-            foreach (var personId in peopleIds)
-            {
-                db.ExperiencesPersons.Add(new ExperiencePerson(experience.ExperienceId, personId));
-            }
+            return RedirectToAction("Index");
+        }
 
+        public IActionResult Delete(int id)
+        {
+            var thisExperience = db.Experiences.FirstOrDefault(e => e.ExperienceId == id);
+            return View(thisExperience);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            System.Diagnostics.Debug.WriteLine("Test");
+            var thisExperience = db.Experiences.FirstOrDefault(e => e.ExperienceId == id);
+            db.Experiences.Remove(thisExperience);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

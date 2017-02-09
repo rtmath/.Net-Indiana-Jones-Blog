@@ -48,6 +48,7 @@ namespace IndianaJonesBlog.Controllers
             var thisPerson = db.Persons.FirstOrDefault(persons => persons.PersonId == id);
             return View(thisPerson);
         }
+
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {

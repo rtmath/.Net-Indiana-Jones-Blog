@@ -28,23 +28,27 @@
                 }
             }
         </select>
-        <label>People that were part of this experience</label>
-        <select name="peopleIds" class="form-control" multiple>
+        <label>People that were part of this experience</label> 
+        <select name="peopleIds" class="form-control" asp-for="ExperiencesPersons" multiple>
+            
+            @foreach (var exp in Model.ExperiencesPersons)
+            {
+                <option asp-for="exp.Person" selected>@exp.Person.FirstName @exp.Person.LastName</option>
+            }
+
             @foreach (var person in ViewBag.ListOfPeople)
             {
-                @if(ViewBag.SelectedPeople.Contains(person))
+                @if (!ViewBag.SelectedPeople.Contains(person))
                 {
-                    <option selected value=@person.PersonId>@person.FirstName @person.LastName</option>
+                    <option>@person.FirstName @person.LastName</option>
                 }
-                else
-                {
-                    <option value=@person.PersonId>@person.FirstName @person.LastName</option>
-                }
+
             }
         </select>
-
+        @*<input type="hidden" asp-for="ExperiencesPersons" />*@
+        <input type="hidden" asp-for="ExperienceId" />
     </div>
     <input type="submit" value="Update" class="btn btn-default" />
 </form>
 
-@Html.ActionLink("Back to Locations", "Index")
+<a asp-controller="Experiences" asp-action="Index">Back to Experiences</a>

@@ -1,5 +1,18 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IndianaJonesBlog.Models.Experience
+
 @{
+    ViewData["Title"] = "Indiana Jones Blog - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h2>Are you sure you want to delete this?</h2>
+
+<hr />
+
+<h3>@Model.Title</h3>
+
+<form asp-controller="Experiences" asp-action="Delete" asp-method="Post" asp-route-id="@Model.ExperienceId">
+    <input type="submit" value="Delete" class="btn btn-default"/>
+</form>
+
+<a asp-controller="Experiences" asp-action="Index">Back</a>

@@ -209,6 +209,8 @@ C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208233614_TryToF
 C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170208233614_TryToFixPersonIdInExperience.Designer.cs
 C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170209171722_ReinitializeDB.cs
 C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170209171722_ReinitializeDB.Designer.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170209214942_CheckCascading.cs
+C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\20170209214942_CheckCascading.Designer.cs
 C:\Users\epicodus\Desktop\net-indiana-jone-blog\Migrations\BlogContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\net-indiana-jone-blog\Models\BlogContext.cs
 C:\Users\epicodus\Desktop\net-indiana-jone-blog\Models\Experience.cs
