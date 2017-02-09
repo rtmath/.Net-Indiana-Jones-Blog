@@ -1,5 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Indiana Jones Blog - Edit Experience";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@model IndianaJonesBlog.Models.Experience
+
+<form asp-controller="Experiences" asp-action="Edit" method="post">
+    <div class="form-group">
+        <label>Experience</label>
+
+        <input asp-for="Title" class="form-control" placeholder="Title" />
+        <br />
+        <textarea class="form-control" asp-for="Description" placeholder="Description"></textarea>
+
+        <label>Where did this experience take place?</label>
+
+        <select asp-for="LocationId" id="locationList" class="form-control">
+            @foreach (var loc in ViewBag.ListOfLocations)
+            {
+                @if (loc.LocationId == Model.LocationId)
+                {
+                    <option selected value=@loc.LocationId>@loc.Region, @loc.Country</option>
+                }
+                else
+                {
+                    <option value=@loc.LocationId>@loc.Region, @loc.Country</option>
+                }
+            }
+        </select>
+        <label>People that were part of this experience</label>
+        <select name="peopleIds" class="form-control" multiple>
+            @foreach (var person in ViewBag.ListOfPeople)
+            {
+                @if(ViewBag.SelectedPeople.Contains(person))
+                {
+                    <option selected value=@person.PersonId>@person.FirstName @person.LastName</option>
+                }
+                else
+                {
+                    <option value=@person.PersonId>@person.FirstName @person.LastName</option>
+                }
+            }
+        </select>
+
+    </div>
+    <input type="submit" value="Update" class="btn btn-default" />
+</form>
+
+@Html.ActionLink("Back to Locations", "Index")

@@ -18,6 +18,9 @@ namespace IndianaJonesBlog.Models
         public int ExperienceId { get; set; }
         public virtual Experience Experience { get; set; }
 
+        public ExperiencePerson()
+        {
+        }
         public ExperiencePerson(int newExperienceId, int newPersonId)
         {
             ExperienceId = newExperienceId;

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Indiana Jones Blog - Create Person";
+    ViewData["Title"] = "Indiana Jones Blog - Create Experience";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -24,7 +24,7 @@
             }
         </select>
         <label>People that were part of this experience</label>
-        <select id="peopleIds" name="peopleIds" class="form-control" multiple="true">
+        <select name="peopleIds" class="form-control" multiple="true">
             @foreach (var person in ViewBag.ListOfPeople)
             {
                 <option value=@person.PersonId>@person.FirstName @person.LastName</option>

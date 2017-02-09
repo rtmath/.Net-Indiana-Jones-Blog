@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Indiana Jones Blog - Experience Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IndianaJonesBlog.Models.Experience
+
+<h2>Details</h2>
+
+<p>@Model.Title</p>
+<p>@Model.Description</p>
+
+@foreach(var person in ViewBag.Persons)
+{
+    <p>@person.FirstName</p>
+}
+
+@Html.ActionLink("Back to experiences", "Index")

@@ -9,9 +9,13 @@
 
 @foreach (var experience in Model)
 {
-    <div>@Html.DisplayFor(_ => experience.Title)</div>
+    <strong>@Html.DisplayFor(_ => experience.Title)</strong>
     <div> @Html.DisplayFor(_ => experience.Description)</div>
-
+    <div><a asp-controller="Experiences" asp-action="Details" asp-route-id="@experience.ExperienceId">Details</a> |                                                <a asp-controller="Experiences" asp-action="Edit" asp-route-id="@experience.ExperienceId">Edit</a> |
+        <a asp-controller="Experiences" asp-action="Delete" asp-route-id="@experience.ExperienceId">Delete</a>
+    </div>
+    <hr />
+    
 }
 
 @Html.ActionLink("Add new Experience", "Create")

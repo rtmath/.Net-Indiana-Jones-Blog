@@ -17,6 +17,6 @@ namespace IndianaJonesBlog.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public virtual Location Location { get; set; }
-        public ICollection<ExperiencePerson> ExperiencesPersons { get; set; }
+        public virtual ICollection<ExperiencePerson> ExperiencesPersons { get; set; }
     }
 }
